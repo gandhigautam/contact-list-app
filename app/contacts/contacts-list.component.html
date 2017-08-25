@@ -1,0 +1,51 @@
+
+    <div class="col-sm-12" *ngIf="contacts">
+
+      <table class="table table-hover table-striped table-responsive">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>Type</th>
+            <th>Picture</th>
+            <th>Action</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="hidden" class="form-control" [(ngModel)]="newContact.id" placeholder="id" required>
+              <input type="text" class="form-control" [(ngModel)]="newContact.name" placeholder="name" required>
+            </td>
+            <td><input type="text" class="form-control" [(ngModel)]="newContact.username"  placeholder="username" required></td>
+            <td><input type="email" class="form-control" [(ngModel)]="newContact.email"  placeholder="email" required></td>
+            <td><input type="number" class="form-control" [(ngModel)]="newContact.number" min="0" maxlength="11" placeholder="number" required></td>
+            <td><input type="text" class="form-control" [(ngModel)]="newContact.type"  placeholder="type" required></td>
+            <td>&nbsp;&nbsp;</td>
+            <td><button class="btn btn-primary" [disabled]="addNewContact" (click)="addContact(newContact,contacts.length)">Add Contact</button></td>
+            <td><button class="btn btn-info" (click)="updateContact(newContact.id,newContact)">Update</button><td>
+            <td><button class="btn btn-default" (click)="deselectContact(newContact)">Clear</button></td>
+            <td><button class="btn btn-danger" (click)="filterContact(newContact.type)">FilterByType</button></td>
+          </tr>
+          <tr *ngFor="let contact of contacts">
+            <td>{{contact.name}}</td>
+            <td>{{contact.username}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.number}}</td>
+            <td>{{contact.type}}</td>
+            <td><img [src]="contact.avatar" height="40" width="40" class="img-responsive img-circle"></td>
+            <td>
+              <button class="btn btn-danger" (click)="removeContact(contact.id)">Remove</button>
+            </td>
+            <td>
+              <button class="btn btn-warning" (click)="editContact(contact.id)">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
