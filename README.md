@@ -17,7 +17,7 @@ Clone this repo into new project folder (e.g., my-proj).
 
 git clone https://github.com/projectlink  my-proj
 cd my-proj
-We have no intention of updating the source on angular/quickstart. Discard the .git folder..
+We have no intention of updating the source on angular/project. Discard the .git folder..
 
 rm -rf .git  # OS/X (bash)
 rd .git /S/Q # windows
@@ -44,7 +44,7 @@ Initialize this project as a local git repo and make the first commit:
 git init
 git add .
 git commit -m "Initial commit"
-Recover the deleted .gitignore from the QuickStart repository if you lost it in the Delete non-essential files step.
+Recover the deleted .gitignore from the contact-list-app repository if you lost it in the Delete non-essential files step.
 Create a remote repository for this project on the service of your choice.
 
 Grab its address (e.g. https://github.com/<my-org>/my-proj.git) and push the local repo to the remote.
@@ -72,7 +72,7 @@ We've captured many of the most useful commands in npm scripts defined in the pa
 npm start - runs the compiler and a server at the same time, both in "watch mode".
 npm run build - runs the TypeScript compiler once.
 npm run build:w - runs the TypeScript compiler in watch mode; the process keeps running, awaiting changes to TypeScript files and re-compiling when it sees them.
-npm run serve - runs the lite-server, a light-weight, static file server, written and maintained by John Papa and Christopher Martin with excellent support for Angular apps that use routing.
+npm run serve - runs the lite-server, a light-weight, static file server, written and maintained by Gandhi Gautam with excellent support for Angular apps that use routing, service, models, DI, pipes, directive ,large scale Mean app architecture and more.
 Here are the test related scripts:
 
 npm test - compiles, runs and watches the karma unit tests
