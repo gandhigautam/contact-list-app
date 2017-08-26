@@ -2,6 +2,7 @@
 
 import { Component } from '@angular/core';
 import { Contact } from '../shared/models/contact';
+import { FiltersPipe } from '../shared/directives/filters.pipe';
 
 @Component({
    selector: 'contacts-list',
@@ -15,16 +16,7 @@ export class ContactListComponent {
     messageOne: "contactlist gautam yes";
 
     newContact: Object = new Contact();
-
-    id: number;
-    name: string;
-    username: string;
-    email: string;
-    number: number;
-    type: string;
-    avatar: string;
     addNewContact: boolean = false;
-
     activeContact: Object;
 
     contacts: Contact[] = [
@@ -32,7 +24,7 @@ export class ContactListComponent {
       { id: 26, name: 'Sonaya', username: 'sonaya sweets' , email: 'sonaya.sweets@gmail.com' ,  number : 9872494770,  type: 'customer',  avatar: 'https://pbs.twimg.com/profile_images/721918869821005824/2qT_RY5M_400x400.jpg' },
       { id: 27, name: 'Hoster', username: 'holly Hoster' ,  email: 'holly.hoster@gmail.com' ,   number : 8782494785,   type: 'friend' ,    avatar: 'https://pbs.twimg.com/profile_images/502500686588690432/wXBzuCBj_400x400.jpeg'}
     ];
-
+	
     constructor(){ }
 
     // activeContact: Contact;

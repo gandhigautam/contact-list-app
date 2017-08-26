@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contacts/contacts-list.component';
-// import { UserFormComponent } from './users/user-form.component';
+import { FiltersPipe } from './shared/directives/filters.pipe';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { ContactListComponent } from './contacts/contacts-list.component';
   declarations: [
     AppComponent,
     ContactListComponent,
-    // UserFormComponent
+    FiltersPipe
   ],
   bootstrap: [ AppComponent ]
 })
